@@ -20,7 +20,7 @@ void test_api_loadData_no_reset(void) {
     tApiError result = api_loadData(&data, "example_1.csv", false);
     TEST_ASSERT_EQUAL_INT(E_SUCCESS, result);
 
-    TEST_ASSERT_EQUAL_INT(5, data.population.count);
+    TEST_ASSERT_EQUAL_INT(6, data.population.count);
     TEST_ASSERT_GREATER_THAN_INT(-1, population_find(data.population, "98001567"));
     TEST_ASSERT_GREATER_THAN_INT(-1, population_find(data.population, "49001567"));
     TEST_ASSERT_GREATER_THAN_INT(-1, population_find(data.population, "37001567"));
